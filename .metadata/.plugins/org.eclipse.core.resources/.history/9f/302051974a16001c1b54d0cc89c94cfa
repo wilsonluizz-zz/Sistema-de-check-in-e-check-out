@@ -1,0 +1,12 @@
+package model.exceptions;
+
+public class DmainException extends Exception {
+
+	private static final long serialVersionUID = 1L;
+	
+	public DmainException(String msg) {
+		super(msg);
+	}
+	
+
+}

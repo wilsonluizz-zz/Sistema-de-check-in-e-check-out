@@ -1,0 +1,21 @@
+package application;
+
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat dataF = new SimpleDateFormat("dd/MM/yyyy");
+		
+		System.out.print("Digite o número do quarto: ");
+		int numeroquarto = sc.nextInt();
+		System.out.print("Digite a data do check-in dd/mm/aaa");
+		Date checkin = dataF.parse(sc.next());
+		
+		sc.close();
+
+	}
+
+}

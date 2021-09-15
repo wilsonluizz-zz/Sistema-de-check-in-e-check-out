@@ -1,0 +1,58 @@
+package model.entidades;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+public class Reserva {
+	
+	private int numeroDoQuarto;
+	private Date checkIn;
+	private Date checkOut;
+	
+	public Reserva(int numeroDoQuarto, Date checkin, Date chaeckout) {	
+		this.numeroDoQuarto = numeroDoQuarto;
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
+	}
+
+	public int getNumeroDoQuarto() {
+		return numeroDoQuarto;
+	}
+
+	public void setNumeroDoQuarto(int numeroDoQuarto) {
+		this.numeroDoQuarto = numeroDoQuarto;
+	}
+
+	public Date getCheckIn() {
+		return checkIn;
+	}
+
+	
+
+	public Date getChaeckOut() {
+		return checkOut;
+	}
+	
+	public long duracao() {
+		long dif = checkOut.getTime() - checkIn.getTime();
+		return TimeUnit.DAYS.convert(dif, TimeUnit.MILLISECONDS);
+	}
+	
+	public void updateDatas(Date checkIN, Date checkOut) {
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
+	}
+	@Override
+	public String toString() {
+		return "Quarto Nº " + numeroDoQuarto + "Data do Check-In " + checkIn + 
+				"Data do Check-Out" + checkOut;
+		
+	}
+
+	
+	
+	
+	
+	
+
+}
